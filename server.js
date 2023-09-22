@@ -3,10 +3,11 @@ var app = express();
 const {swaggerUi, specs} = require('./modules/swagger');
 var mysql = require("mysql2/promise");
 var bodyParser = require('body-parser');
+const cors =  require('cors') // this is added cors into the express-app
 
 var mytestServices = require('./routes/Employee');
 
-
+app.use(cors())
 app.use('/v1.0/employee', mytestServices);
 
 app.use(bodyParser.urlencoded({limit: '100mb', extended: false}));
