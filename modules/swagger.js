@@ -8,7 +8,7 @@ const options = {
 			version: '1.0.0',
 			description: 'API - LIst',
 		},
-		host: 'localhost:9000',
+		host: 'https://autodesk-h2c.onrender.com',
 		basePath: '/'
 	},
 	apis: ['./routes/*.js', '/swagger/*']
